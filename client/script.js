@@ -85,7 +85,6 @@ const handleSubmit = async (e) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv);
-
     const response = await fetch('https://codey.onrender.com/', {
         method: 'POST',
         headers: {
