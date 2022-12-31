@@ -51,7 +51,7 @@ function chatStripe(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                      src=${isAi ? bot : user} 
+                      src="${isAi ? bot : user}" 
                       alt="${isAi ? 'bot' : 'user'}" 
                     />
                 </div>
@@ -85,7 +85,8 @@ const handleSubmit = async (e) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv);
-    const response = await fetch('https://codey.onrender.com/', {
+    const response = await fetch('https://codey.onrender.com/', 
+    {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -107,6 +108,7 @@ const handleSubmit = async (e) => {
         const err = await response.text();
 
         messageDiv.innerHTML = "Something went wrong";
+
         alert(err);
     }
 }
